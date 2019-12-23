@@ -1,1 +1,1 @@
-# board-editor
+# smoker-editor
