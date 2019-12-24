@@ -36,3 +36,11 @@ const container = `
     </div>
 `;
 
+
+class SmokerEditorContainer {
+    getContainer() {
+        return container;
+    }
+}
+
+export default SmokerEditorContainer;
