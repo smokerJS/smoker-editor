@@ -1,3 +1,5 @@
+import SmokerEditorContainer from './container';
+
 class SmokerEditor {
 
     /**
@@ -5,6 +7,7 @@ class SmokerEditor {
      */
     constructor(element) {
         this.element = element;
+        this.container = new SmokerEditorContainer();
     }
 
     /**
