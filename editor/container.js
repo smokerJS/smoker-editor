@@ -1,6 +1,6 @@
 
 
-const basicFunction = [
+const module = [
     {
         key: 'bold',
     },

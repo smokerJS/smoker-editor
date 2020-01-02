@@ -1,4 +1,5 @@
 import SmokerEditorContainer from './container';
+import scss from './assets/scss/default.scss';
 
 class SmokerEditor {
 
@@ -18,7 +19,7 @@ class SmokerEditor {
     }
 
     init() {
-        this.element.innerHTML = '<div>ale</div>';
+        this.element.innerHTML = this.container.getContainer();
     }
 }
 
