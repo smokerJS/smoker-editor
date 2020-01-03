@@ -12,10 +12,10 @@ const container = `
         <div class="editor_header">
             <ul>
                 <li>
-                    <i></i>
+                    <button class="btn_bold"><i>B</i></button>
                 </li>
                 <li>
-                    <i></i>
+                    <i>ㅁㄴㅍㅈ븁쥽ㅈ</i>
                 </li>
                 <li>
                     <i></i>
@@ -29,7 +29,7 @@ const container = `
             </ul>
         </div>
         <div class="editor_body">
-            <div contenteditable="true">
+            <div class="editor_contents" contenteditable="true">
 
             </div>
         </div>
