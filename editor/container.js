@@ -12,16 +12,26 @@ const container = `
         <div class="editor_header">
             <ul>
                 <li>
-                    <button class="btn_bold"><i>B</i></button>
+                    <button class="btn_editor_action btn_bold"><i>Bold</i></button>
                 </li>
                 <li>
-                    <i>ㅁㄴㅍㅈ븁쥽ㅈ</i>
+                    <button class="btn_editor_action btn_italic"><i>Italic</i></button>
                 </li>
                 <li>
-                    <i></i>
+                    <button class="btn_editor_action btn_underline"><i>Underline</i></button>
                 </li>
                 <li>
-                    <i></i>
+                    <button class="btn_editor_action btn_heading"><i>Heading</i></button>
+                    <div class="layer_editor_action layer_heading">
+                        <ul>
+                            <li><button><i>H1</i></button></li>
+                            <li><button><i>H2</i></button></li>
+                            <li><button><i>H3</i></button></li>
+                            <li><button><i>H4</i></button></li>
+                            <li><button><i>H5</i></button></li>
+                            <li><button><i>H6</i></button></li>
+                        </ul>
+                    </div>
                 </li>
                 <li>
                     <i></i>
