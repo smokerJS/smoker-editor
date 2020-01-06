@@ -120,7 +120,15 @@ class SmokerEditorHandler {
     replaceBlock() {
         document.querySelector('.btn_heading').addEventListener('click',(e) => {
             document.querySelector('.layer_heading').classList.toggle('on');
-            // document.execCommand('underline', false);
+        });
+        document.querySelectorAll('.layer_heading > ul > li > button').forEach( (ele) => {
+            ele.addEventListener('click',(e) => {
+                // document.querySelector('.layer_heading').classList.toggle('on');
+                console.log(e);
+                console.log(e.target.dataset.replaceBlock);
+                document.execCommand('formatBlock', false, e.target.dataset.replaceBlock)
+                // document.execCommand('underline', false);
+            });
         });
     }
 
