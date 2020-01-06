@@ -1,6 +1,19 @@
 class SmokerEditorHandler {
     constructor() {
+        if(document.selection) {
+            this.sel = document.selection;
+        }else {
+            this.sel = document.getSelection();
+        }
         this.init();
+    }
+
+    getRange() {
+        if(document.selection) {
+            return this.sel.createRange();
+        }else {
+            return this.sel.getRangeAt(0);
+        }
     }
 
     addCheckedByTagName(tagName) {
@@ -123,6 +136,9 @@ class SmokerEditorHandler {
         });
         document.querySelectorAll('.layer_heading > ul > li > button').forEach( (ele) => {
             ele.addEventListener('click',(e) => {
+                let replaceBlock = e.target.dataset.replaceBlock;
+
+                // if(replaceBlock[0] !== 'H' || ) replaceBlock = '';
                 // document.querySelector('.layer_heading').classList.toggle('on');
                 console.log(e);
                 console.log(e.target.dataset.replaceBlock);
