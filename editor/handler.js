@@ -136,7 +136,7 @@ class SmokerEditorHandler {
         });
         document.querySelectorAll('.layer_heading > ul > li > button').forEach( (ele) => {
             ele.addEventListener('click',(e) => {
-                let replaceBlock = e.target.dataset.replaceBlock;
+                // let replaceBlock = e.target.dataset.replaceBlock;
 
                 // if(replaceBlock[0] !== 'H' || ) replaceBlock = '';
                 // document.querySelector('.layer_heading').classList.toggle('on');
