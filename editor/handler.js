@@ -157,7 +157,6 @@ class SmokerEditorHandler {
         this.replaceUnderline();
         this.replaceBlock();
         document.execCommand('defaultParagraphSeparator', false, 'p');
-        // document.execCommand("defaultBlock", false, "p")
     }
 }
 
