@@ -40,7 +40,7 @@ const container = `
         </div>
         <div class="editor_body">
             <div class="editor_contents" contenteditable="true">
-
+                <p><br/></p>
             </div>
         </div>
     </div>
