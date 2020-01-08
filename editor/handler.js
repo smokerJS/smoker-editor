@@ -47,9 +47,6 @@ class SmokerEditorHandler {
                     nodeList.forEach(ele => this.addCheckedByTagName(ele.nodeName));
                     // return;
                 }
-                console.dir(sel.getRangeAt(0).cloneContents())
-                console.log(sel)
-                console.log(sel.getRangeAt(0).commonAncestorContainer)
                 this.checkButtonUsed(sel.getRangeAt(0).startContainer.parentElement)
                 this.checkButtonUsed(sel.getRangeAt(0).endContainer.parentElement)
             }else {
@@ -81,8 +78,6 @@ class SmokerEditorHandler {
             if(sel) {
                 
                 let range = sel.getRangeAt(0);
-                console.log(sel)
-                console.log(range)
                 // let text = sel.toString();
                 // node.innerHTML = text;
                 // if(removeTag) {
@@ -102,7 +97,6 @@ class SmokerEditorHandler {
                 document.querySelectorAll('.btn_editor_action').forEach(ele => ele.classList.remove('checked'));
                 let sel = document.getSelection();
                 if(sel) {
-                    console.log(sel.getRangeAt(0))
                     this.checkButtonUsed(sel.getRangeAt(0).startContainer.parentElement)
                     this.checkButtonUsed(sel.getRangeAt(0).endContainer.parentElement)
                 }else {
@@ -136,14 +130,11 @@ class SmokerEditorHandler {
         });
         document.querySelectorAll('.layer_heading > ul > li > button').forEach( (ele) => {
             ele.addEventListener('click',(e) => {
-                // let replaceBlock = e.target.dataset.replaceBlock;
-
+                let replaceBlock = e.target.dataset.replaceBlock;
+                console.log(this.sel.focusNode())
                 // if(replaceBlock[0] !== 'H' || ) replaceBlock = '';
                 // document.querySelector('.layer_heading').classList.toggle('on');
-                console.log(e);
-                console.log(e.target.dataset.replaceBlock);
                 document.execCommand('formatBlock', false, e.target.dataset.replaceBlock)
-                // document.execCommand('underline', false);
             });
         });
     }
