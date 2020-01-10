@@ -1,19 +1,19 @@
-import SmokerEditorMoudle from '../';
+// import SmokerEditorMoudle from '../';
 
-class Bold extends SmokerEditorMoudle {
-    toggleHandler() {
+// class Bold extends SmokerEditorMoudle {
+//     toggleHandler() {
 
-    }
+//     }
 
-    setIcon() {
-        this.icon = '<i>Bold</i>';
-    }
+//     setIcon() {
+//         this.icon = '<i>Bold</i>';
+//     }
 
-    mount() {
-        return `
+//     mount() {
+//         return `
             
-        `
-    }
-}
+//         `
+//     }
+// }
 
-export default Bold;
+// export default Bold;
