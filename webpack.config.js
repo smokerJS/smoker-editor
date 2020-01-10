@@ -15,8 +15,12 @@ module.exports = {
         rules: [
             {
                 test: /\.ts$/,
-                use: ['ts-loader'],
-                exclude: ["/node_modules"]
+                use: 'awesome-typescript-loader'
+            },
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                loader: "source-map-loader"
             },
             {
                 test: /\.scss$/,
@@ -27,5 +31,8 @@ module.exports = {
                 ]
             }
         ]
+    },
+    resolve: {
+        extensions: [".ts", ".js", ".json"]
     }
 };
