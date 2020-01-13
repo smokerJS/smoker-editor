@@ -3,6 +3,7 @@ import scss from './assets/scss/default.scss';
 class SmokerEditor {
     private _element: HTMLElement
     private _container: String
+    private modules: Array<Object>
 
     constructor(element: HTMLElement) {
         this._element = element;
@@ -15,6 +16,14 @@ class SmokerEditor {
 
     get element(): HTMLElement {
         return this._element;
+    }
+
+    private getDefaultModules() {
+        
+    }
+
+    private getModules() {
+
     }
 
     init() {
