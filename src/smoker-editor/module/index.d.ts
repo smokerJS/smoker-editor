@@ -8,8 +8,3 @@ interface SE_ModuleBase {
     iconImageURL?: string;
     entryHandler: Function;
 }
-
-interface SE_ModuleObject {
-    moduleName: string;
-    module: HTMLElement;
-}
