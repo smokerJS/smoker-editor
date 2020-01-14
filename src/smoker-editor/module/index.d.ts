@@ -1,10 +1,10 @@
 interface SE_ModuleBase {
-    moduleName: string;
-    buttonId?: string;
-    buttonClass?: string;
-    iconText?: string;
-    iconId?: string;
-    iconClass?: string;
+    moduleName   : string;
+    entryHandler : Function;
+    buttonId?    : string;
+    buttonClass? : string;
+    iconId?      : string;
+    iconClass?   : string;
+    iconText?    : string;
     iconImageURL?: string;
-    entryHandler: Function;
 }
