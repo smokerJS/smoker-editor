@@ -17,8 +17,8 @@ class SmokerEditor {
         return this._element;
     }
 
-    set module(module: Object) {
-        this._modules[module.name] = module;
+    set SE_Module(SE_Module: SE_ModuleObject) {
+        this._modules[SE_Module.moduleName] = SE_Module;
     }
 
     private getDefaultModules() {
