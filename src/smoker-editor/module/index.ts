@@ -1,19 +1,8 @@
-interface ModuleBase {
-    moduleName: string;
-    buttonId?: string;
-    buttonClass?: string;
-    iconText?: string;
-    iconId?: string;
-    iconClass?: string;
-    iconImageURL?: string;
-    entryHandler: Function;
-}
-
 class SmokerEditorModule {
 
-    private _moduleInfo: ModuleBase;
+    private _moduleInfo: SE_ModuleBase;
 
-    constructor(moduleInfo?: ModuleBase) {
+    constructor(moduleInfo?: SE_ModuleBase) {
         moduleInfo && (this._moduleInfo = moduleInfo);
     }
 
@@ -77,7 +66,7 @@ class SmokerEditorModule {
         return this._moduleInfo.entryHandler;
     }
 
-    createModule(): HTMLElement {
+    createModule(): SE_ModuleObject {
         const button: HTMLElement = document.createElement('button');
         this.buttonId && (button.id = this.buttonId);
         this.buttonClass && (button.className = this.buttonClass);
@@ -90,7 +79,8 @@ class SmokerEditorModule {
         this.iconImageURL && (icon.style.backgroundImage = this.iconImageURL);
         
         button.append(icon);
-        return button;
+        
+        return {moduleName: this.moduleName, module: button};
     }
 }
 
