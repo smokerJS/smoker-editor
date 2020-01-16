@@ -29,7 +29,15 @@ class SmokerEditor {
 
     }
 
+
+
     init() {
+        const container: HTMLElement = document.createElement('div');
+        container.className = 'smoker_editor_container';
+
+        const editor_header: HTMLElement = document.createElement('div');
+        editor_header.className = 'editor_header';
+
         this._element.innerHTML = `
             <style>
                 ${scss}
