@@ -79,7 +79,6 @@ class SmokerEditorModule {
         this.iconImageURL && (icon.style.backgroundImage = this.iconImageURL);
         
         button.append(icon);
-        
         return {moduleName: this.moduleName, module: button};
     }
 }
