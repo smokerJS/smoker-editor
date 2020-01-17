@@ -2,7 +2,6 @@ import scss from './assets/scss/default.scss';
 
 class SmokerEditor {
     private _element: HTMLElement
-    private _container: String
     private _modules: Object
 
     constructor(element: HTMLElement) {
@@ -37,6 +36,21 @@ class SmokerEditor {
 
         const editor_header: HTMLElement = document.createElement('div');
         editor_header.className = 'editor_header';
+        const editor_modules: HTMLElement = document.createElement('ul');
+        editor_header.appendChild(editor_modules);
+        // editor_modules.appendChild()
+
+        const editor_body: HTMLElement = document.createElement('div');
+        editor_body.className = 'editor_body';
+        editor_body.innerHTML = `
+        <div class="editor_contents" contenteditable="true">
+            <p><br/></p>
+        </div>`
+
+        const style = document.createElement('style');
+        style.innerHTML = scss;
+
+
 
         this._element.innerHTML = `
             <style>
