@@ -38,7 +38,7 @@ class SmokerEditor {
         editor_header.className = 'editor_header';
         const editor_modules: HTMLElement = document.createElement('ul');
         editor_header.appendChild(editor_modules);
-        editor_modules.appendChild()
+        // editor_modules.appendChild()
 
         const editor_body: HTMLElement = document.createElement('div');
         editor_body.className = 'editor_body';
